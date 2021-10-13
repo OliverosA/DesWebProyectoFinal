@@ -1,10 +1,10 @@
 <ActionBar title="Proyecto Desarrollo Web">
-    <ActionItem text="Create" ios.systemIcon="16" ios.position="right" android.position="popup">
+    <ActionItem text="Create" (tap)="navigateCreate()" ios.systemIcon="16" ios.position="right" android.position="popup">
     </ActionItem>
-    <ActionItem text="Read" ios.systemIcon="16" ios.position="right" android.position="popup">
+    <ActionItem text="Read" (tap)="navigateRead()" ios.systemIcon="16" ios.position="right" android.position="popup">
     </ActionItem>
-    <ActionItem text="Update" ios.systemIcon="16" ios.position="right" android.position="popup">
+    <ActionItem text="Update" (tap)="navigateUpdate()" ios.systemIcon="16" ios.position="right" android.position="popup">
     </ActionItem>
-    <ActionItem text="Delete" ios.systemIcon="16" ios.position="right" android.position="popup">
+    <ActionItem text="Delete" (tap)="navigateDelete()" ios.systemIcon="16" ios.position="right" android.position="popup">
     </ActionItem>
 </ActionBar>

@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core'
 import { Routes } from '@angular/router'
 import { NativeScriptRouterModule } from '@nativescript/angular'
-
-import { ItemsComponent } from './item/items.component'
-import { ItemDetailComponent } from './item/item-detail.component'
+import { CreateComponent } from './Create/create.component'
+import { ReadComponent } from './Read/read.component'
+import { UpdateComponent } from './Update/update.component'
+import { DeleteComponent } from './Delete/delete.component'
 
 const routes: Routes = [
-  { path: '', redirectTo: '/items', pathMatch: 'full' },
-  { path: 'items', component: ItemsComponent },
-  { path: 'item/:id', component: ItemDetailComponent },
+  { path: '', redirectTo: '/create', pathMatch: 'full' },
+  { path: 'create', component: CreateComponent },
+  { path: 'read', component: ReadComponent },
+  { path: 'update', component: UpdateComponent },
+  { path: 'delete', component: DeleteComponent },
 ]
 
 @NgModule({

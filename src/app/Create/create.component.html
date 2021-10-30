@@ -1,13 +1,21 @@
 <actBar></actBar>
 
 <GridLayout>
-  <StackLayout>
-    <TextField class="input" hint="Nombre"></TextField>
-    <TextField class="input" keyboardType="email" hint="Correo"></TextField>
-    <TextField class="input" keyboardType="number" hint="Telefono"></TextField>
-    <TextField class="input" hint="Cuenta De Github"></TextField>
-    <Button text="Fotografia"></Button>
-    <Button text="Registrarse" class="btn btn-primary">
-    </Button>
+  <StackLayout class="register-form" [formGroup]="registerForm">
+    <TextField class="input" hint="Nombre"
+               formControlName="nombre"
+    ></TextField>
+    <TextField class="input" keyboardType="email" hint="Correo"
+               formControlName="correo"
+    ></TextField>
+    <TextField class="input" keyboardType="number" hint="Telefono"
+               formControlName="telefono"
+    ></TextField>
+    <TextField class="input" hint="Cuenta De Github"
+               formControlName="github"
+    ></TextField>
+    <button id="btnRegistrar" text="REGISTRAR"
+            (tap)="onCreateUsers(registerForm.value)">
+    </button>
   </StackLayout>
 </GridLayout>

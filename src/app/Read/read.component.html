@@ -1,3 +1,28 @@
 <actBar></actBar>
 
-<Label text="Aqui Ira una Tabla"></Label>
+<StackLayout>
+    <GridLayout>
+        <ListView [items]="items">
+            <ng-template let-item="item" let-i="index">
+                <DockLayout id="datosUsuarios">
+                    <Label width="15"></Label>
+                    <Label text="{{(i+1)}}" fontSize="15"></Label>
+                    <Label width="10"></Label>
+                    <Label text="&#xf2bd;" fontSize="50" width="50" height="50" class="fa action-item"></Label>
+                    <StackLayout [nsRouterLink]="['/item', item.id]">
+                        <Label [text]="item.nombre" fontSize="15"></Label>
+                        <Label [text]="'Correo: ' + (item.correo)" fontSize="9"></Label>
+                        <Label [text]="'Tel: ' + (item.telefono)" fontSize="9"></Label>
+                        <Label [text]="'Github: ' + (item.github)" fontSize="9"></Label>
+                    </StackLayout>
+                    <StackLayout>
+                        <button id="btnEliminar"
+                                (tap)="onEliminar(item.id)"
+                                text="Eliminar">
+                        </button>
+                    </StackLayout>
+                </DockLayout>
+            </ng-template>
+        </ListView>
+    </GridLayout>
+</StackLayout>
